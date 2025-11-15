@@ -1,0 +1,18 @@
+{
+  "manifestVersion": 1,
+  "name": "video-playback",
+  "shortname": "video-playback",
+  "manufacturer": "Colin DeFord",
+  "product": ["Video Playback"],
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": "git+https://github.com/companion/companion-module-video-playback.git",
+  "bugs": "https://github.com/companion/companion-module-video-playback/issues",
+  "main": "index.js",
+  "scripts": ["test"],
+  "runtime": {
+    "type": "node18",
+    "api": "nodejs-ipc"
+  },
+  "entrypoint": "index.js"
+}

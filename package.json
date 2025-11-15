@@ -1,0 +1,36 @@
+{
+  "name": "companion-module-video-playback",
+  "version": "1.0.0",
+  "description": "Bitfocus Companion module for Video Playback player",
+  "main": "dist/main.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix"
+  },
+  "keywords": [
+    "companion",
+    "video-playback",
+    "video",
+    "player"
+  ],
+  "author": "Colin DeFord",
+  "license": "MIT",
+  "dependencies": {
+    "@companion-module/base": "^1.0.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/node-fetch": "^2.6.11",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  }
+}
