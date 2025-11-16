@@ -8,8 +8,8 @@
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "dev": "tsc -p tsconfig.json --watch",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint src --ext .ts",
-    "lint:fix": "eslint src --ext .ts --fix"
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix"
   },
   "keywords": [
     "companion",
