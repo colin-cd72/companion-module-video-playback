@@ -1071,9 +1071,18 @@ class VideoPlaybackInstance extends InstanceBase<ModuleConfig> {
 					const mins = Math.floor((seconds % 3600) / 60)
 					const secs = Math.floor(seconds % 60)
 					const frames = Math.floor((seconds % 1) * 30) // Assuming 30fps
-					return `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs
-						.toString()
-						.padStart(2, '0')}:${frames.toString().padStart(2, '0')}`
+					// Compact format: only show hours/minutes if non-zero
+					if (hours > 0) {
+						return `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs
+							.toString()
+							.padStart(2, '0')}:${frames.toString().padStart(2, '0')}`
+					} else if (mins > 0) {
+						return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}:${frames
+							.toString()
+							.padStart(2, '0')}`
+					} else {
+						return `${secs.toString().padStart(2, '0')}:${frames.toString().padStart(2, '0')}`
+					}
 				}
 
 				const getTimecodeComponents = (seconds: number): TimeComponents => {

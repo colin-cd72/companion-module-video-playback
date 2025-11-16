@@ -1,20 +1,26 @@
 {
-  "manifestVersion": 1,
   "id": "video-playback",
   "name": "video-playback",
   "shortname": "video-playback",
   "description": "Control Video Playback player via HTTP API",
-  "manufacturer": "Colin DeFord",
-  "products": ["Video Playback"],
-  "keywords": ["video", "playback", "player", "media"],
   "version": "1.0.0",
   "license": "MIT",
   "repository": "git+https://github.com/colin-cd72/companion-module-video-playback.git",
   "bugs": "https://github.com/colin-cd72/companion-module-video-playback/issues",
-  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "Colin DeFord",
+      "email": "colin@example.com"
+    }
+  ],
+  "legacyIds": [],
   "runtime": {
     "type": "node18",
     "api": "nodejs-ipc",
-    "apiVersion": "1.12.0"
-  }
+    "apiVersion": "1.12.0",
+    "entrypoint": "../index.js"
+  },
+  "manufacturer": "Colin DeFord",
+  "products": ["Video Playback"],
+  "keywords": ["video", "playback", "player", "media"]
 }
